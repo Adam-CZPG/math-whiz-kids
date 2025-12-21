@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 import { createPageUrl } from "../utils";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { Button } from "../components/ui/Button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
 import { Play, Trophy, Award, Sparkles } from 'lucide-react';
-import GameHeader from '@/components/game/GameHeader';
-import LevelCard from '@/components/game/LevelCard';
-import BadgeDisplay from '@/components/game/BadgeDisplay';
-import ProgressStats from '@/components/game/ProgressStats';
+import GameHeader from '../components/game/GameHeader';
+import LevelCard from '../components/game/LevelCard';
+import BadgeDisplay from '../components/game/BadgeDisplay';
+import ProgressStats from '../components/game/ProgressStats';
 
 export default function Home() {
   const queryClient = useQueryClient();
