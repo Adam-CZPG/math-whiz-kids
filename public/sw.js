@@ -1,12 +1,18 @@
-self.addEventListener('install', (e) => {
-  console.log('[Service Worker] Install');
+const CACHE_NAME = 'math-whiz-v1';
+const assets = ['/', '/index.html'];
+
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache.addAll(assets);
+    })
+  );
 });
 
-self.addEventListener('fetch', (e) => {
-  // This allows the app to load while offline
-  e.respondWith(
-    fetch(e.request).catch(() => {
-      return new Response("Offline - Please connect to the internet to play.");
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request).then((response) => {
+      return response || fetch(event.request);
     })
   );
 });
