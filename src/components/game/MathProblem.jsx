@@ -138,7 +138,7 @@ export default function MathProblem({
                     : option === selected
                       ? 'bg-red-500 hover:bg-red-500 text-white'
                       : 'bg-white/50 text-gray-400'
-                  : 'bg-white hover:bg-white/90 text-gray-800 hover:scale-105 shadow-lg'
+                  : 'bg-white hover:bg-white/90 text-black hover:scale-105 shadow-lg'
               }`}
             >
               {option}
