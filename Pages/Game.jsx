@@ -1,15 +1,16 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
-import { createPageUrl } from "../utils";
+import { createPageUrl } from '@/utils';
+import { base44 } from '@/api/base44Client';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { Button } from "../components/ui/Button";
+import { Button } from '@/components/ui/button';
 import { ArrowLeft, Volume2, VolumeX } from 'lucide-react';
-import GameHeader from '../components/game/GameHeader';
-import MathProblem from '../components/game/MathProblem';
-import LevelComplete from '../components/game/LevelComplete';
-import Confetti from '../components/game/Confetti';
-import NewBadgeModal from '../components/game/NewBadgeModal';
+import GameHeader from '@/components/game/GameHeader';
+import MathProblem from '@/components/game/MathProblem';
+import LevelComplete from '@/components/game/LevelComplete';
+import Confetti from '@/components/game/Confetti';
+import NewBadgeModal from '@/components/game/NewBadgeModal';
 
 const levelConfigs = {
   1: { operations: ['+'], maxNum: 10, timeLimit: 15, questions: 10 },

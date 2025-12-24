@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Lock, Star, CheckCircle2 } from 'lucide-react';
-import { cn } from "../../lib/utils";
+import { cn } from '@/lib/utils';
 
 const levelThemes = [
   { from: 'from-pink-400', to: 'to-rose-500', shadow: 'shadow-pink-200' },

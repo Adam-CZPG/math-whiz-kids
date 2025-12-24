@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from "react-router-dom";
-import { createPageUrl } from "../utils";
-import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { Button } from "../components/ui/Button";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "../components/ui/Tabs";
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
+import { base44 } from '@/api/base44Client';
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Play, Trophy, Award, Sparkles } from 'lucide-react';
-import GameHeader from '../components/game/GameHeader';
-import LevelCard from '../components/game/LevelCard';
-import BadgeDisplay from '../components/game/BadgeDisplay';
-import ProgressStats from '../components/game/ProgressStats';
+import GameHeader from '@/components/game/GameHeader';
+import LevelCard from '@/components/game/LevelCard';
+import BadgeDisplay from '@/components/game/BadgeDisplay';
+import ProgressStats from '@/components/game/ProgressStats';
 
 export default function Home() {
   const queryClient = useQueryClient();
